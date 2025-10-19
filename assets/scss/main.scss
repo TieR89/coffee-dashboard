@@ -1,0 +1,44 @@
+.v-application {
+  font-family: 'Nunito', sans-serif;
+  &.theme--light {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 400;
+    color: #000000;
+
+    h1 {
+      font-size: 24px !important;
+      line-height: 28px !important;
+      font-weight: 700 !important;
+      color: #000000 !important;
+    }
+
+    .text-caption {
+      font-size: 10px !important;
+      line-height: 12px !important;
+      font-weight: 400 !important;
+      color: #787878 !important;
+    }
+  }
+
+  &.theme--dark {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 400;
+    color: #ffffff;
+
+    h1 {
+      font-size: 24px !important;
+      line-height: 28px !important;
+      font-weight: 700 !important;
+      color: #ffffff !important;
+    }
+
+    .text-caption {
+      font-size: 10px !important;
+      line-height: 12px !important;
+      font-weight: 400 !important;
+      color: #aaaaaa !important;
+    }
+  }
+}
