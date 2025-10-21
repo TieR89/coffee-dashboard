@@ -1,5 +1,6 @@
 export default {
-  mode: 'ssr',
+  ssr: true,
+  target: 'server',
   css: ['~/assets/scss/main.scss'],
   buildModules: ['@nuxtjs/vuetify'],
   plugins: ['~/plugins/api.js'],
