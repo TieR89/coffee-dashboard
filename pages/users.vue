@@ -195,18 +195,19 @@ export default {
             </v-col>
 
             <v-col cols="12" md="6">
-              <v-select
+              <v-autocomplete
                 v-model="selectedCities"
                 :items="allCities"
                 item-text="title"
                 item-value="id"
-                label="Фильтр по городам"
+                label="Фильтр по городам (поиск)"
                 multiple
                 outlined
                 dense
                 hide-details
                 chips
                 deletable-chips
+                clearable
               />
             </v-col>
           </v-row>
