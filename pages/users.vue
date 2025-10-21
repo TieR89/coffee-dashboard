@@ -16,25 +16,6 @@ export default {
     UserDetailsModal
   },
 
-  data() {
-    return {
-      allUsers: [],
-      allCities: [],
-      loadingProgress: 0,
-
-      searchQuery: '',
-      selectedCities: [],
-
-      pagination: {
-        page: 1,
-        perPage: USERS_PER_PAGE
-      },
-
-      selectedUser: null,
-      isModalVisible: false
-    }
-  },
-
   /**
    * Хук fetch() используется Nuxt для асинхронной загрузки данных
    * на стороне сервера (SSR) или клиента.
@@ -69,8 +50,30 @@ export default {
       }
       this.loadingProgress = 100
     } catch (error) {
-      console.error('Ошибка при загрузке пользователей:', error)
+      this.$nuxt.error({
+        statusCode: 500,
+        message: 'Ошибка при загрузке пользователей'
+      })
       throw new Error('Не удалось выполнить имитацию загрузки')
+    }
+  },
+
+  data() {
+    return {
+      allUsers: [],
+      allCities: [],
+      loadingProgress: 0,
+
+      searchQuery: '',
+      selectedCities: [],
+
+      pagination: {
+        page: 1,
+        perPage: USERS_PER_PAGE
+      },
+
+      selectedUser: null,
+      isModalVisible: false
     }
   },
 
