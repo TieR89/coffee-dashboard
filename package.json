@@ -13,7 +13,8 @@
   },
   "dependencies": {
     "faker": "^5.5.3",
-    "nuxt": "^2.0.0"
+    "nuxt": "^2.0.0",
+    "node-fetch-native": "^1.4.1"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^2.0.0",
